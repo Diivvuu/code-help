@@ -26,7 +26,7 @@ int main(){
             cout<< "* ";
         }
         //fourth triangle - numbers
-        int numbers = n;
+        int numbers = n-i+1;
         for(int second = n;second>=i;second--){
             cout << numbers-- << " ";
         }
