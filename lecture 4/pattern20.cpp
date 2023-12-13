@@ -1,7 +1,21 @@
 #include<iostream>
 using namespace std;
+/*
+      1
+    2 3
+  4 5 6
+7 8 9 10*/
 int main(){
     int n;
     cin >> n;
-    for(int )
+    int count = 1;
+    for(int i=1;i<=n;i++){
+        for(int spaces=1;spaces<=n-i;spaces++){
+            cout << "  ";
+        }
+        for(int numbers = 1;numbers<=i;numbers++){
+            cout << count++ << " ";
+        }
+        cout << endl;
+    }
 }
