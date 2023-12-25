@@ -1,30 +1,19 @@
-//codestudio solution
-/*
-void bubbleSort(vector<int>& arr, int n){
-    for(int i = 1; i < n; i++){
-        for(int j = 0; j < n - i; j++){
-            if(arr[j] > arr[j+1]){
-                swap(arr[j], arr[j+1]);
-            }
-        }
-    }
-}
-*/
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 void printArray(int *arr, int n){
     for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
-    cout << endl;
 }
-void bubbleSort(int *arr, int n){
-    for(int i = 1; i < n; i++){
-        for(int j = 0; j < n - i; j++){
-            if(arr[j] > arr[j+1]){
-                swap(arr[j], arr[j+1]);
+void selectionSort(int *arr, int n){
+    for(int i = 0; i < n; i++){
+        int minIndex = i;
+        for(int j = i + 1; j < n; j++){
+            if(arr[minIndex] > arr[j]){
+                minIndex = j;
             }
         }
+        swap(arr[minIndex], arr[i]);
     }
 }
 int main(){
@@ -39,8 +28,8 @@ int main(){
         cout << "Enter the elements of array : " << endl;
         for(int i = 0; i < n; i++){
             cin >> arr[i];
-        } 
-        bubbleSort(arr, n);
+        }
+        selectionSort(arr, n);
         printArray(arr, n);
     }
 }
